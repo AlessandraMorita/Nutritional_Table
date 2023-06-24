@@ -1,0 +1,20 @@
+.foodGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foodGroup h3 {
+    align-self: self-start;
+}
+
+.foodGroup h3:hover {
+    cursor: pointer;
+}
+
+.foodList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 70%;
+}

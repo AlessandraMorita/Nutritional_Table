@@ -95,119 +95,119 @@ const nutritionalList = [
 		"measure": "4 Colheres de Sopa",
 		"amountGrams": "160",
 		"caloricMeasurementKcal": "150",
-		"group": "Carboidratos"
+		"group": "Carnes e Ovos"
 	},
 	{
 		"ingredient": "Bife de Fígado",
 		"measure": "1 Unidade Média",
 		"amountGrams": "90",
 		"caloricMeasurementKcal": "150",
-		"group": "Carboidratos"
+		"group": "Carnes e Ovos"
 	},
 	{
 		"ingredient": "Bife Grelhado",
 		"measure": "1 Unidade Média",
 		"amountGrams": "100",
 		"caloricMeasurementKcal": "150",
-		"group": "Carboidratos"
+		"group": "Carnes e Ovos"
 	},
 	{
 		"ingredient": "Camarão Cozido",
 		"measure": "15 Unidades",
 		"amountGrams": "170",
 		"caloricMeasurementKcal": "150",
-		"group": "Carboidratos"
+		"group": "Carnes e Ovos"
 	},
 	{
 		"ingredient": "Carne Assada",
 		"measure": "1 Fatia Média",
 		"amountGrams": "100",
 		"caloricMeasurementKcal": "150",
-		"group": "Carboidratos"
+		"group": "Carnes e Ovos"
 	},
 	{
 		"ingredient": "Carne Moída Refogada",
 		"measure": "5 Colheres de Sopa",
 		"amountGrams": "90",
 		"caloricMeasurementKcal": "150",
-		"group": "Carboidratos"
+		"group": "Carnes e Ovos"
 	},
 	{
 		"ingredient": "Carne Seca",
 		"measure": "2 Unidades Pequenas",
 		"amountGrams": "40",
 		"caloricMeasurementKcal": "150",
-		"group": "Carboidratos"
+		"group": "Carnes e Ovos"
 	},
 	{
 		"ingredient": "Costela Bovina Assada",
 		"measure": "1 Pedaço",
 		"amountGrams": "45",
 		"caloricMeasurementKcal": "150",
-		"group": "Carboidratos"
+		"group": "Carnes e Ovos"
 	},
 	{
 		"ingredient": "Coxa Ou Sobrecoxa sem pele",
 		"measure": "2 Unidades",
 		"amountGrams": "75",
 		"caloricMeasurementKcal": "150",
-		"group": "Carboidratos"
+		"group": "Carnes e Ovos"
 	},
 	{
 		"ingredient": "Filé de Frango Grelhado",
 		"measure": "1 Filé Médio",
 		"amountGrams": "120",
 		"caloricMeasurementKcal": "150",
-		"group": "Carboidratos"
+		"group": "Carnes e Ovos"
 	},
 	{
 		"ingredient": "Hamburguer Grelhado",
 		"measure": "1 Unidade",
 		"amountGrams": "100",
 		"caloricMeasurementKcal": "150",
-		"group": "Carboidratos"
+		"group": "Carnes e Ovos"
 	},
 	{
 		"ingredient": "Linguiça de Porco Grelhada",
 		"measure": "4 Fatias Finas",
 		"amountGrams": "60",
 		"caloricMeasurementKcal": "150",
-		"group": "Carboidratos"
+		"group": "Carnes e Ovos"
 	},
 	{
 		"ingredient": "Lombo de Porco Assado",
 		"measure": "2 Fatias Finas",
 		"amountGrams": "90",
 		"caloricMeasurementKcal": "150",
-		"group": "Carboidratos"
+		"group": "Carnes e Ovos"
 	},
 	{
 		"ingredient": "Ovo Mexido/Cozido",
 		"measure": "3 Unidades",
 		"amountGrams": "150",
 		"caloricMeasurementKcal": "150",
-		"group": "Carboidratos"
+		"group": "Carnes e Ovos"
 	},
 	{
 		"ingredient": "Peito de frango assado",
 		"measure": "1 Pedaço Médio",
 		"amountGrams": "100",
 		"caloricMeasurementKcal": "150",
-		"group": "Carboidratos"
+		"group": "Carnes e Ovos"
 	},
 	{
 		"ingredient": "Peixe Assado",
 		"measure": "1 Filé",
 		"amountGrams": "150",
 		"caloricMeasurementKcal": "150",
-		"group": "Carboidratos"
+		"group": "Carnes e Ovos"
 	},
 	{
 		"ingredient": "Sardinha em Conserva",
 		"measure": "1 Unidade",
 		"amountGrams": "60",
 		"caloricMeasurementKcal": "150",
-		"group": "Carboidratos"
+		"group": "Carnes e Ovos"
 	},
 	{
 		"ingredient": "Abacate",
@@ -879,7 +879,7 @@ const nutritionalList = [
 		"measure": "1/2 Colher de Sopa",
 		"amountGrams": "9",
 		"caloricMeasurementKcal": "2",
-		"group": "73"
+		"group": "Óleos e Gorduras"
 	},
 	{
 		"ingredient": "Azeite de Oliva",
