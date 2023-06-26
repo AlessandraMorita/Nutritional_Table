@@ -2,19 +2,36 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    margin: 1rem;
+    border-radius: 1rem;
+    background-color: hsl(347, 63%, 91%);
 }
 
-.foodGroup h3 {
+.foodGroupTitle {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.foodGroupTitle h3 {
     align-self: self-start;
+    padding: 2rem;
 }
 
-.foodGroup h3:hover {
+.foodGroupTitle h3:hover, .foodGroupTitle p:hover {
     cursor: pointer;
+}
+
+.foodGroupTitle p {
+    margin: 1rem;
+    color: hsl(0, 71%, 36%);
+    font-weight: 700;
 }
 
 .foodList {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 70%;
+    max-width: 90%;
 }

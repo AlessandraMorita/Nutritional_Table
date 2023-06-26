@@ -1,7 +1,7 @@
 .foodInfo {
     margin: .9rem;
     padding: .5rem;
-    background-color: rgb(248, 230, 230);
+    background-color: 	hsl(347, 63%, 74%);
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
@@ -10,14 +10,13 @@
 }
 
 .foodInfo h4 {
-    margin: 0;
     padding: .5rem;
 }
 
 .foodInfo h5 {
     text-align: right;
-    margin: 0.5rem 0 0 0;
-    color: rgb(156, 26, 26);
+    margin-top: 0.5rem;
+    color: hsl(0, 71%, 36%);
 }
 
 .foodInfo h5:hover {
@@ -26,11 +25,11 @@
 
 .nutritionFacts {
     margin: .5rem;
-    min-width: 300px;
 }
 
 .nutritionFacts p {
     margin: 0.5rem 1rem;
+    text-align: left;
 }
 
 .servingSize, .caloricMeasurementKcal {

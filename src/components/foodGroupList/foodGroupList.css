@@ -1,0 +1,13 @@
+.foodGroupList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 75%;
+    max-width: 980px;
+}
+
+@media only screen and (max-width: 760px) {
+    .foodGroupList {
+        width: 100%;
+    }
+}

@@ -20,7 +20,11 @@ function FoodGroup(props) {
 
   return (
     <div className="foodGroup">
-      <h3 onClick={handleOnClick}>{props.foodGroup}</h3>
+      <div className="foodGroupTitle">
+        <h3 onClick={handleOnClick}>{props.foodGroup}</h3>
+        <p style={{ display: display }} onClick={handleOnClick}>x</p>
+      </div>
+    
       <div className="foodList" style={{ display: display }}>
         {dataBase.map((elem, index) => {
           return elem.group === foodGroup ? (
