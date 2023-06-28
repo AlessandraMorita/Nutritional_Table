@@ -1,0 +1,11 @@
+.amountCalculator {
+  padding: 2rem;
+}
+
+.amountCalculator {
+  background-color: hsl(230, 24%, 39%);
+  color: #ffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

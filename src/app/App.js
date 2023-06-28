@@ -1,28 +1,22 @@
 import React from "react";
 import "./App.css";
-import data from "./data";
-import FoodGroupList from "../components/foodGroupList/FoodGroupList";
+import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route, Routes } from "react-router-dom";
+import FoodReplaceList from "../pages/foodReplaceList/FoodReplaceList";
+import AmountCalculator from '../pages/amountCalculator/AmountCalculator';
+import Root from "../components/root";
+import HomePage from "../pages/homePage/HomePage";
+
+const appRouter = createBrowserRouter(createRoutesFromElements(
+  <Route path="/" element={<Root />} >
+    {/* <Route path="/" element={<HomePage />} /> */}
+    <Route path="/foodReplaceList" element={<FoodReplaceList />} />
+    <Route path="/amountCalculator" element={<AmountCalculator />} />
+  </Route>
+));
 
 function App() {
   return (
-    <div className="App">
-      <section className="introduction">
-        <h1>Nutritional Information</h1>
-        <p>Hello me!</p>
-        <p>
-          This app was developed to help me replace foods in my diet. It
-          suggests substitute foods and calculates the required amount of it.
-        </p>
-        <p className="textRef">
-          The data is based on my diet and data provided by my nutritionist.
-        </p>
-      </section>
-
-      <section className="foodReplaceList">
-        <h2>Which food group do I want to replace?</h2>
-        <FoodGroupList dataBase={data} />
-      </section>
-    </div>
+    <RouterProvider router={appRouter} />
   );
 }
 

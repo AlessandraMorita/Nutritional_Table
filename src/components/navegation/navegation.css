@@ -1,0 +1,46 @@
+.introduction {
+  font-size: 1.2rem;
+  padding: 2rem;
+  padding-bottom: 0;
+}
+
+.introduction > * {
+  margin: 2rem;
+}
+
+.textRef {
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: hsl(230, 24%, 25%);
+  margin-bottom: 0;
+}
+
+.nav-link {
+  width: 50%;
+  color: #FFFF;
+  text-decoration: none;
+  padding: 1rem;
+  text-align: center;
+}
+
+.active-nav-link {
+  background-color: hsl(230, 24%, 39%);
+}
+
+@media only screen and (max-width: 760px) {
+    .introduction {
+      padding: 2rem 0.8rem 0 0.8rem;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .introduction {
+      padding: 2rem 0 0 0;
+    }
+  }

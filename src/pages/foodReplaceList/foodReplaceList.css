@@ -1,0 +1,25 @@
+.foodReplaceList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background-color: hsl(230, 24%, 39%);
+}
+
+.foodReplaceList h2 {
+  padding: 2rem;
+  color: #FFFF;
+}
+
+@media only screen and (max-width: 760px) {
+    .foodReplaceList {
+      padding: 2rem 0.8rem;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .foodReplaceList {
+      padding: 2rem 0;
+    }
+  }
