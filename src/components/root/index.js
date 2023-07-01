@@ -1,12 +1,11 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Navegation from '../navegation/Navegation';
-// import Outlet
+import Navigation from '../navigation/Navigation';
 
 const Root = () => {
     return (
         <div>
-            <Navegation />
+            <Navigation />
             <Outlet />
         </div>
     );

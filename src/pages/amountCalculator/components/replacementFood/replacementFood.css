@@ -1,0 +1,51 @@
+.replacementFood {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 400px;
+}
+
+.replacementFoodList {
+  margin: 1.5rem;
+  padding: 0.8rem;
+  border-radius: 1rem;
+}
+
+.replacementFood label {
+  font-size: 1.25rem;
+  margin: 1.5rem;
+  text-align: center;
+}
+
+.replacementFood option {
+  background-color: hsl(231, 57%, 91%);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.replacementFood p {
+  font-size: 0.8rem;
+  margin: 1rem;
+  padding: 1rem;
+  align-self: flex-end;
+}
+
+.replacementFood .clickHere a {
+  display: block;
+  color: white;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  text-align: right;
+}
+
+.replacementFood .navButton {
+  align-self: stretch;
+}
+
+.replacementFood button {
+  white-space: nowrap;
+}
+
+

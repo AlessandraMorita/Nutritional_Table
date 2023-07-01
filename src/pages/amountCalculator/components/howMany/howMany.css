@@ -1,0 +1,30 @@
+.replacedFoodAmount {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 400px;
+}
+
+.replacedFoodAmount label {
+  font-size: 1.25rem;
+  margin: 1.5rem;
+  text-align: center;
+}
+
+.replacedFoodAmount input {
+  margin: 1.5rem;
+  margin-right: 0.5rem;
+  padding: 0.8rem;
+  border-radius: 1rem;
+  border: none;
+}
+
+.replacedFoodAmount p {
+  display: inline-block;
+}
+
+.replacedFoodAmount .navButton {
+  align-self: stretch;
+}

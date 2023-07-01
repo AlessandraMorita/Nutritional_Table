@@ -1,13 +1,11 @@
 import React from 'react'
-import Calculator from '../../components/calculator/Calculator';
-import data from "../../app/data";
 import './amountCalculator.css';
+import { Outlet } from 'react-router-dom';
 
 function AmountCalculator() {
   return (
     <div className='amountCalculator'>
-        <h2>How many?</h2>
-        <Calculator dataBase={data} />
+        <Outlet />
     </div>
   )
 }
