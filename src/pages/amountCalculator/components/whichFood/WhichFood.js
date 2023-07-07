@@ -11,9 +11,9 @@ function WhichFood(props) {
     props.updateStateInfo(e);
   }
 
-  function getFoodOption(group) {
+  function getFoodOption(group, index) {
     return (
-      <optgroup label={group}>
+      <optgroup label={group} key={index} >
         {dataBase.map((elem, index) => {
           if (elem.group === group) {
             return (

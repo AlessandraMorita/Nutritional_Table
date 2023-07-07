@@ -4,7 +4,6 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 function NewFood(props) {
   const newFood = props.newFood;
-  const dataBase = props.dataBase;
   const foodGroupList = props.foodGroupList;
   const navigate = useNavigate();
   const location = useLocation();
@@ -14,7 +13,6 @@ function NewFood(props) {
   const [servingAmountGrams, setServingAmountGrams] = useState("");
   const [caloricMeasurementKcal, setCaloricMeasurementKcal] = useState("");
   const [group, setGroup] = useState("");
-
 
   function updateNewFood(obj) {
     props.updateNewFood(obj);
@@ -65,32 +63,36 @@ function NewFood(props) {
         />
       </section>
 
-      <section className="servingAmount">
+      <section>
         <label htmlFor="servingAmountGrams">What is the serving amount?</label>
-        <input
-          id="servingAmountGrams"
-          type="number"
-          value={servingAmountGrams}
-          onChange={(e) => setServingAmountGrams(e.target.value)}
-          min={1}
-          required
-        />
-        <p>g</p>
+        <div className="value">
+          <input
+            id="servingAmountGrams"
+            type="number"
+            value={servingAmountGrams}
+            onChange={(e) => setServingAmountGrams(e.target.value)}
+            min={1}
+            required
+          />
+          <p>g</p>
+        </div>
       </section>
 
-      <section className="caloricMeasurement">
+      <section>
         <label htmlFor="caloricMeasurementKcal">
-          How many calories per serving? (Kcal)
+          How many calories per serving?
         </label>
-        <input
-          id="caloricMeasurementKcal"
-          type="number"
-          value={caloricMeasurementKcal}
-          onChange={(e) => setCaloricMeasurementKcal(e.target.value)}
-          min={0}
-          required
-        />
-        <p>Kcal</p>
+        <div className="value">
+          <input
+            id="caloricMeasurementKcal"
+            type="number"
+            value={caloricMeasurementKcal}
+            onChange={(e) => setCaloricMeasurementKcal(e.target.value)}
+            min={0}
+            required
+          />
+          <p>kcal</p>
+        </div>
       </section>
 
       <section>
@@ -102,6 +104,7 @@ function NewFood(props) {
           onChange={(e) => setGroup(e.target.value)}
           required
         >
+          <option value="">-</option>
           {foodGroupList.map((elem, index) => {
             return (
               <option key={index} value={elem}>

@@ -6,11 +6,28 @@ function ReplacementFood(props) {
   const replacedFood = props.replacedFood;
   const replacementFood = props.replacementFood;
   const newFood = props.newFood;
+  const foodGroupList = props.foodGroupList;
   const dataBase = props.dataBase;
   const navigate = useNavigate();
 
   function updateStateInfo(e) {
     props.updateStateInfo(e);
+  }
+
+  function getFoodOption(group, index) {
+    return (
+      <optgroup label={group} key={index}>
+        {dataBase.map((elem, index) => {
+          if (elem.group === group) {
+            return (
+              <option key={index} value={elem.ingredient}>
+                {elem.ingredient}
+              </option>
+            );
+          }
+        })}
+      </optgroup>
+    );
   }
 
   function handleSubmit(e) {
@@ -32,19 +49,20 @@ function ReplacementFood(props) {
         required
       >
         <option value="">-</option>
-        {dataBase.map((elem, index) => (
+        {foodGroupList.map(getFoodOption)}
+        {/* {dataBase.map((elem, index) => (
           <option key={index} value={elem.ingredient}>
             {elem.ingredient}
           </option>
-        ))}
+        ))} */}
       </select>
 
       <p>
         Can't find the food that you want?
         <span className="clickHere">
-        <Link
-            to= "/amountCalculator/newFood"
-            state= {{ fromWhichFoodPage: false }}
+          <Link
+            to="/amountCalculator/newFood"
+            state={{ fromWhichFoodPage: false }}
           >
             Click here!
           </Link>

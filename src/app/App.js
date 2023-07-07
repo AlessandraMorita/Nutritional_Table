@@ -54,14 +54,13 @@ function App() {
   }
 
   function getFoodGroupList() {
-    let foodGroupList = [""];
+    let foodGroupList = [];
     dataBase.forEach((element) => {
       let isGroupInList = foodGroupList.includes(element.group);
       if (!isGroupInList) {
         foodGroupList.push(element.group);
       }
     });
-
     return foodGroupList;
   }
 
@@ -109,6 +108,7 @@ function App() {
                     replacementFood={replacementFood}
                     updateStateInfo={updateStateInfo}
                     dataBase={dataBase}
+                    foodGroupList={foodGroupList}
                   />
                 }
               />
@@ -131,6 +131,7 @@ function App() {
                     replacedFoodAmount={replacedFoodAmount}
                     replacementFood={replacementFood}
                     newFood={newFood}
+                    dataBase={dataBase}
                   />
                 }
               />

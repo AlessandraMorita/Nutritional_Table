@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 function AmountCalculator() {
   return (
     <div className='amountCalculator'>
-        <Outlet />
+      <Outlet />
     </div>
   )
 }

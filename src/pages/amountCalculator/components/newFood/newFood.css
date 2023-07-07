@@ -1,0 +1,54 @@
+.newFood {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.newFood h2 {
+  margin: 1.5rem;
+}
+
+.newFood section {
+  margin: 0.5rem;
+}
+
+.newFood label {
+  font-size: 1.25rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.newFood input {
+  margin: 1rem;
+  margin-right: 0.5rem;
+  padding: 0.8rem;
+  border-radius: 1rem;
+  border: none;
+}
+
+.newFood p {
+  display: inline-block;
+}
+
+.newFood .value {
+  text-align: center;
+  display: inline;
+}
+
+#group {
+  margin: 1rem;
+  padding: 0.8rem;
+  border-radius: 1rem;
+}
+
+.newFood option {
+  background-color: hsl(231, 57%, 91%);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.newFood .navButton {
+  align-self: stretch;
+}

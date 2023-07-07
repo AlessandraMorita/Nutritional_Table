@@ -25,7 +25,7 @@ function Introduction() {
           Food Replace List{" "}
         </NavLink>
         <NavLink
-          to="./amountCalculator"
+          to="/amountCalculator"
           className={({ isActive }) =>
             isActive ? "nav-link active-nav-link" : "nav-link"
           }
