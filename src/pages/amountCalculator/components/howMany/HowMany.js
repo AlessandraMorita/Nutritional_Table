@@ -3,6 +3,7 @@ import "./howMany.css";
 
 function HowMany(props) {
   const replacedFood = props.replacedFood;
+  const newFood = props.newFood;
   const replacedFoodAmount = props.replacedFoodAmount;
   const navigate = useNavigate();
 
@@ -18,7 +19,7 @@ function HowMany(props) {
   return (
     <form onSubmit={handleSubmit} className="replacedFoodAmount">
       <label htmlFor="replacedFoodAmount">
-        How many of '{replacedFood}' should I eat?
+        How many of '{replacedFood === '' ? newFood.replaced[0] : replacedFood}' should I eat?
       </label>
       <div className="amount">
         <input

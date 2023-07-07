@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 function ReplacementFood(props) {
   const replacedFood = props.replacedFood;
   const replacementFood = props.replacementFood;
+  const newFood = props.newFood;
   const dataBase = props.dataBase;
   const navigate = useNavigate();
 
@@ -19,12 +20,12 @@ function ReplacementFood(props) {
 
   return (
     <form className="replacementFood" onSubmit={handleSubmit}>
-      <label htmlFor="replacementFood">
-        I'll replace '{replacedFood}' with
+      <label htmlFor="replacementFoodList">
+        I'll replace '{replacedFood === "" ? newFood.replaced[0] : replacedFood}
+        ' with
       </label>
       <select
-        id="replacementFood"
-        className="replacementFoodList"
+        id="replacementFoodList"
         value={replacementFood}
         onChange={updateStateInfo}
         name="replacementFood"
@@ -41,7 +42,12 @@ function ReplacementFood(props) {
       <p>
         Can't find the food that you want?
         <span className="clickHere">
-          <Link to="/amountCalculator/newFood">Click here!</Link>
+        <Link
+            to= "/amountCalculator/newFood"
+            state= {{ fromWhichFoodPage: false }}
+          >
+            Click here!
+          </Link>
         </span>
       </p>
       <div className="navButton">
