@@ -1,13 +1,10 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useOutletContext } from "react-router-dom";
 import "./howMany.css";
 import { useEffect } from "react";
 
-function HowMany({
-  replacedFood,
-  replacedFoodAmount,
-  updateStateInfo,
-  newFood,
-}) {
+function HowMany() {
+  const { replacedFood, replacedFoodAmount, newFood, updateStateInfo } =
+    useOutletContext();
   const navigate = useNavigate();
 
   function handleSubmit(e) {

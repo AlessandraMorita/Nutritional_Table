@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./newFood.css";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, useOutletContext } from "react-router-dom";
 
-function NewFood({ foodGroupList, updateNewFood, newFood }) {
+function NewFood() {
+  const { foodGroupList, newFood, updateNewFood } = useOutletContext();
   const navigate = useNavigate();
   const location = useLocation();
   const isFromWhichFoodPage = location.state.fromWhichFoodPage;

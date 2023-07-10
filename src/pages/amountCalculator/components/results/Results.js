@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useOutletContext } from "react-router-dom";
 import "./results.css";
 
-function Results({
-  replacedFood,
-  replacedFoodAmount,
-  replacementFood,
-  newFood,
-  dataBase,
-}) {
+function Results() {
+  const {
+    dataBase,
+    replacedFood,
+    replacedFoodAmount,
+    replacementFood,
+    newFood,
+  } = useOutletContext();
   const [caloricValueReplaced, setCaloricValueReplaced] = useState(0);
   const [amountReplacement, setAmountReplacement] = useState(0);
   const [foodGroup, setFoodGroup] = useState([]);
@@ -117,7 +118,7 @@ function Results({
         <button onClick={() => navigate(-1)}>Back</button>
         <button
           className="newSearch"
-          onClick={() => navigate("/amountCalculator")}
+          onClick={() => navigate("/amountCalculator/whichFood")}
         >
           New Search :)
         </button>

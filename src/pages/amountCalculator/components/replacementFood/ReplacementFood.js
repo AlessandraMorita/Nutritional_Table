@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./replacementFood.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useOutletContext } from "react-router-dom";
 
-function ReplacementFood({
-  dataBase,
-  replacedFood,
-  replacementFood,
-  foodGroupList,
-  updateStateInfo,
-  newFood,
-}) {
+function ReplacementFood() {
+  const {
+    dataBase,
+    foodGroupList,
+    replacedFood,
+    replacementFood,
+    newFood,
+    updateStateInfo,
+  } = useOutletContext();
   const navigate = useNavigate();
 
   function getFoodOption(group, index) {

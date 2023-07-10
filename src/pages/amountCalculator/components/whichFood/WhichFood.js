@@ -1,8 +1,10 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useOutletContext } from "react-router-dom";
 import "./whichFood.css";
 import { useEffect } from "react";
 
-function WhichFood({ dataBase, replacedFood, foodGroupList, updateStateInfo }) {
+function WhichFood() {
+  const { dataBase, foodGroupList, replacedFood, updateStateInfo } =
+    useOutletContext();
   const navigate = useNavigate();
 
   function getFoodOption(group, index) {
