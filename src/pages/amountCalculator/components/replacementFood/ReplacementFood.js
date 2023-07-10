@@ -2,18 +2,15 @@ import React, { useState, useEffect } from "react";
 import "./replacementFood.css";
 import { Link, useNavigate } from "react-router-dom";
 
-function ReplacementFood(props) {
-  const replacedFood = props.replacedFood;
-  const replacementFood = props.replacementFood;
-  const newFood = props.newFood;
-  const dataBase = props.dataBase;
-  const foodGroupList = props.foodGroupList;
-
+function ReplacementFood({
+  dataBase,
+  replacedFood,
+  replacementFood,
+  foodGroupList,
+  updateStateInfo,
+  newFood,
+}) {
   const navigate = useNavigate();
-
-  function updateStateInfo(e) {
-    props.updateStateInfo(e);
-  }
 
   function getFoodOption(group, index) {
     return (

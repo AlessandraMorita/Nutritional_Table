@@ -113,7 +113,6 @@ function App() {
                 path="/amountCalculator/newFood"
                 element={
                   <NewFood
-                    dataBase={dataBase}
                     foodGroupList={foodGroupList}
                     updateNewFood={updateNewFood}
                     newFood={newFood}

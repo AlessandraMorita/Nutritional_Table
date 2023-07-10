@@ -2,14 +2,8 @@ import { Link, useNavigate } from "react-router-dom";
 import "./whichFood.css";
 import { useEffect } from "react";
 
-function WhichFood(props) {
-  const dataBase = props.dataBase;
-  const replacedFood = props.replacedFood;
-  const foodGroupList = props.foodGroupList;
+function WhichFood({ dataBase, replacedFood, foodGroupList, updateStateInfo }) {
   const navigate = useNavigate();
-  function updateStateInfo(e) {
-    props.updateStateInfo(e);
-  }
 
   function getFoodOption(group, index) {
     return (

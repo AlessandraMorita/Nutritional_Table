@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./newFood.css";
 import { useNavigate, useLocation } from "react-router-dom";
 
-function NewFood(props) {
-  const newFood = props.newFood;
-  const foodGroupList = props.foodGroupList;
+function NewFood({ foodGroupList, updateNewFood, newFood }) {
   const navigate = useNavigate();
   const location = useLocation();
   const isFromWhichFoodPage = location.state.fromWhichFoodPage;
@@ -13,10 +11,6 @@ function NewFood(props) {
   const [servingAmountGrams, setServingAmountGrams] = useState("");
   const [caloricMeasurementKcal, setCaloricMeasurementKcal] = useState("");
   const [group, setGroup] = useState("");
-
-  function updateNewFood(obj) {
-    props.updateNewFood(obj);
-  }
 
   function handleSubmit(e) {
     e.preventDefault();

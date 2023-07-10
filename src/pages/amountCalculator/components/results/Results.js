@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./results.css";
 
-function Results(props) {
-  const replacedFood = props.replacedFood;
-  const replacedFoodAmount = props.replacedFoodAmount;
-  const replacementFood = props.replacementFood;
-  const newFood = props.newFood;
-  const dataBase = props.dataBase;
+function Results({
+  replacedFood,
+  replacedFoodAmount,
+  replacementFood,
+  newFood,
+  dataBase,
+}) {
   const [caloricValueReplaced, setCaloricValueReplaced] = useState(0);
   const [amountReplacement, setAmountReplacement] = useState(0);
   const [foodGroup, setFoodGroup] = useState([]);

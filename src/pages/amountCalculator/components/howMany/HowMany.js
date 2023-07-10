@@ -2,15 +2,13 @@ import { useNavigate } from "react-router-dom";
 import "./howMany.css";
 import { useEffect } from "react";
 
-function HowMany(props) {
-  const replacedFood = props.replacedFood;
-  const newFood = props.newFood;
-  const replacedFoodAmount = props.replacedFoodAmount;
+function HowMany({
+  replacedFood,
+  replacedFoodAmount,
+  updateStateInfo,
+  newFood,
+}) {
   const navigate = useNavigate();
-
-  function updateStateInfo(e) {
-    props.updateStateInfo(e);
-  }
 
   function handleSubmit(e) {
     e.preventDefault();
