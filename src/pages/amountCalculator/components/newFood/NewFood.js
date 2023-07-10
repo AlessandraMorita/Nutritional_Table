@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./newFood.css";
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -47,13 +47,17 @@ function NewFood(props) {
     }
   }
 
+  useEffect(() => {
+    if (foodGroupList.length === 0) {
+      navigate("/");
+    }
+  }, []);
+
   return (
     <form className="newFood" name="newFood" onSubmit={handleSubmit}>
       <h2>What food do you want to register?</h2>
       <section>
-        <label htmlFor="newIngredient">
-          What food do you want to register?
-        </label>
+        <label htmlFor="newIngredient">What food?</label>
         <input
           id="newIngredient"
           type="text"
@@ -88,7 +92,7 @@ function NewFood(props) {
             type="number"
             value={caloricMeasurementKcal}
             onChange={(e) => setCaloricMeasurementKcal(e.target.value)}
-            min={0}
+            min={1}
             required
           />
           <p>kcal</p>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./replacementFood.css";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -6,8 +6,9 @@ function ReplacementFood(props) {
   const replacedFood = props.replacedFood;
   const replacementFood = props.replacementFood;
   const newFood = props.newFood;
-  const foodGroupList = props.foodGroupList;
   const dataBase = props.dataBase;
+  const foodGroupList = props.foodGroupList;
+
   const navigate = useNavigate();
 
   function updateStateInfo(e) {
@@ -35,11 +36,17 @@ function ReplacementFood(props) {
     navigate("/amountCalculator/results");
   }
 
+  useEffect(() => {
+    if (foodGroupList.length === 0) {
+      navigate("/");
+    }
+  }, []);
+
   return (
     <form className="replacementFood" onSubmit={handleSubmit}>
       <label htmlFor="replacementFoodList">
-        I'll replace '{replacedFood === "" ? newFood.replaced[0] : replacedFood}
-        ' with
+        You'll replace '
+        {replacedFood === "" ? newFood.replaced[0] : replacedFood}' with
       </label>
       <select
         id="replacementFoodList"

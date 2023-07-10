@@ -80,6 +80,9 @@ function Results(props) {
   }
 
   useEffect(() => {
+    if (replacedFood === "" && newFood.replaced.length === 0) {
+      navigate("/");
+    }
     setCaloricValueReplaced(getCaloricValue());
     setAmountReplacement(getAmountValue());
     setFoodGroup(isSameFoodGroup);
@@ -97,7 +100,9 @@ function Results(props) {
         {replacementFood === "" ? newFood.replacement[0] : replacementFood}'.
       </p>
       {foodGroup[0] ? (
-        <p className="resultsIsSameGroup">Perfect! You are replacing the same food group!</p>
+        <p className="resultsIsSameGroup">
+          Perfect! You are replacing the same food group!
+        </p>
       ) : (
         <p className="resultsIsSameGroup">
           You are not replacing the same food group!
@@ -109,6 +114,12 @@ function Results(props) {
       )}
       <div className="navButton">
         <button onClick={() => navigate(-1)}>Back</button>
+        <button
+          className="newSearch"
+          onClick={() => navigate("/amountCalculator")}
+        >
+          New Search :)
+        </button>
       </div>
     </div>
   );

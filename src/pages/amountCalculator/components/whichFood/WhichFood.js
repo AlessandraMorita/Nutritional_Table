@@ -1,19 +1,19 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./whichFood.css";
+import { useEffect } from "react";
 
 function WhichFood(props) {
   const dataBase = props.dataBase;
   const replacedFood = props.replacedFood;
   const foodGroupList = props.foodGroupList;
   const navigate = useNavigate();
-
   function updateStateInfo(e) {
     props.updateStateInfo(e);
   }
 
   function getFoodOption(group, index) {
     return (
-      <optgroup label={group} key={index} >
+      <optgroup label={group} key={index}>
         {dataBase.map((elem, index) => {
           if (elem.group === group) {
             return (
@@ -32,9 +32,15 @@ function WhichFood(props) {
     navigate("/amountCalculator/howMany");
   }
 
+  useEffect(() => {
+    if (foodGroupList.length === 0) {
+      navigate("/");
+    }
+  }, []);
+
   return (
     <form className="whichFood" onSubmit={handleSubmit}>
-      <label htmlFor="whichFoodList">Which food I want to replace?</label>
+      <label htmlFor="whichFoodList">Which food you want to replace?</label>
       <select
         id="whichFoodList"
         value={replacedFood}
@@ -44,12 +50,6 @@ function WhichFood(props) {
       >
         <option value="">-</option>
         {foodGroupList.map(getFoodOption)}
-
-        {/* {dataBase.map((elem, index) => (
-          <option key={index} value={elem.ingredient}>
-            {elem.ingredient}
-          </option>
-        ))} */}
       </select>
       <p>
         Can't find the food that you want?

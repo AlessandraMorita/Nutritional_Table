@@ -15,19 +15,17 @@ import HowMany from "../pages/amountCalculator/components/howMany/HowMany";
 import dataBase from "./data";
 import ReplacementFood from "../pages/amountCalculator/components/replacementFood/ReplacementFood";
 import Results from "../pages/amountCalculator/components/results/Results";
-// import HomePage from "../pag/es/homePage/HomePage";
 
 function App() {
-  const [foodGroupList, setFoodGroupList] = useState("");
+  const [foodGroupList, setFoodGroupList] = useState([]);
   const [replacedFood, setReplacedFood] = useState("");
   const [replacedFoodAmount, setReplacedFoodAmount] = useState("");
   const [replacementFood, setReplacementFood] = useState("");
   const [newFood, setNewFood] = useState({
-    replaced: [""],
-    replacement: [""],
+    replaced: [],
+    replacement: [],
     isFromWhichFoodPage: "",
   });
-  // const [replacementFoodInfo, setReplacementFoodInfo] = useState("");
 
   function updateStateInfo(e) {
     switch (e.target.name) {
@@ -54,19 +52,19 @@ function App() {
   }
 
   function getFoodGroupList() {
-    let foodGroupList = [];
+    let groupList = [];
     dataBase.forEach((element) => {
-      let isGroupInList = foodGroupList.includes(element.group);
+      let isGroupInList = groupList.includes(element.group);
       if (!isGroupInList) {
-        foodGroupList.push(element.group);
+        groupList.push(element.group);
       }
     });
-    return foodGroupList;
+
+    setFoodGroupList(groupList);
   }
 
   useEffect(() => {
-    let list = getFoodGroupList();
-    setFoodGroupList(list);
+    getFoodGroupList();
   }, []);
 
   return (
@@ -74,7 +72,6 @@ function App() {
       router={createBrowserRouter(
         createRoutesFromElements(
           <Route path="/" element={<Root />}>
-            {/* <Route path="/" element={<HomePage />} /> */}
             <Route path="/foodReplaceList" element={<FoodReplaceList />} />
             <Route path="/amountCalculator" element={<AmountCalculator />}>
               <Route
@@ -83,8 +80,8 @@ function App() {
                   <WhichFood
                     dataBase={dataBase}
                     replacedFood={replacedFood}
-                    updateStateInfo={updateStateInfo}
                     foodGroupList={foodGroupList}
+                    updateStateInfo={updateStateInfo}
                   />
                 }
               />
@@ -93,9 +90,9 @@ function App() {
                 element={
                   <HowMany
                     replacedFood={replacedFood}
-                    newFood={newFood}
                     replacedFoodAmount={replacedFoodAmount}
                     updateStateInfo={updateStateInfo}
+                    newFood={newFood}
                   />
                 }
               />
@@ -103,12 +100,12 @@ function App() {
                 path="/amountCalculator/replacementFood"
                 element={
                   <ReplacementFood
-                    replacedFood={replacedFood}
-                    newFood={newFood}
-                    replacementFood={replacementFood}
-                    updateStateInfo={updateStateInfo}
                     dataBase={dataBase}
+                    replacedFood={replacedFood}
+                    replacementFood={replacementFood}
                     foodGroupList={foodGroupList}
+                    updateStateInfo={updateStateInfo}
+                    newFood={newFood}
                   />
                 }
               />
@@ -116,10 +113,10 @@ function App() {
                 path="/amountCalculator/newFood"
                 element={
                   <NewFood
-                    newFood={newFood}
-                    updateNewFood={updateNewFood}
                     dataBase={dataBase}
                     foodGroupList={foodGroupList}
+                    updateNewFood={updateNewFood}
+                    newFood={newFood}
                   />
                 }
               />

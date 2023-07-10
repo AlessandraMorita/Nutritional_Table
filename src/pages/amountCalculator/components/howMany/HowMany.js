@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "./howMany.css";
+import { useEffect } from "react";
 
 function HowMany(props) {
   const replacedFood = props.replacedFood;
@@ -16,10 +17,17 @@ function HowMany(props) {
     navigate("/amountCalculator/replacementFood");
   }
 
+  useEffect(() => {
+    if (replacedFood === "" && newFood.replaced.length === 0) {
+      navigate("/");
+    }
+  }, []);
+
   return (
     <form onSubmit={handleSubmit} className="replacedFoodAmount">
       <label htmlFor="replacedFoodAmount">
-        How many of '{replacedFood === '' ? newFood.replaced[0] : replacedFood}' should I eat?
+        How many of '{replacedFood === "" ? newFood.replaced[0] : replacedFood}'
+        should you eat?
       </label>
       <div className="amount">
         <input
