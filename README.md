@@ -50,3 +50,4 @@ $ npm start
 The project is still being developed. Next challenges:
 
 * Add more features
+* Make page amountCalculator responsive
