@@ -20,6 +20,7 @@ function Introduction() {
           className={({ isActive }) =>
             isActive ? "nav-link active-nav-link" : "nav-link"
           }
+          reloadDocument
         >
           {" "}
           Food Replace List{" "}
@@ -29,6 +30,7 @@ function Introduction() {
           className={({ isActive }) =>
             isActive ? "nav-link active-nav-link" : "nav-link"
           }
+          reloadDocument
         >
           {" "}
           Kcal Calculator{" "}

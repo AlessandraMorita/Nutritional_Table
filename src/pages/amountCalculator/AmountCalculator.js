@@ -13,7 +13,7 @@ function AmountCalculator() {
     replacement: [],
     isFromWhichFoodPage: "",
   });
-  const navigation = useNavigate();
+  const navigate = useNavigate();
 
   function updateStateInfo(e) {
     switch (e.target.name) {
@@ -53,7 +53,7 @@ function AmountCalculator() {
 
   useEffect(() => {
     getFoodGroupList();
-    navigation("/amountCalculator/whichFood");
+    navigate("/amountCalculator/whichFood");
   }, []);
 
   return (
