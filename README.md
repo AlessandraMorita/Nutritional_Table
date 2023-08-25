@@ -15,14 +15,20 @@ Contents
  ## Why?
  
  I wanted to practice my knowledge of React components, hooks and React Router. I also wanted to create features that make easy to calculate the amount of food that replaces my meal plan.
+
+ <a href="https://nutritional-info-94609.web.app/">
+  <img
+    src="./src/pages/homePage/homePage.png"
+    alt="Nutritional Information Home Page Image"
+    width='500'
+  />
+</a>
+
+ Or you can also view the live page **[here](https://nutritional-info-94609.web.app/)**.
  
  ## How To Use?
  
- To view the live page: **[click here](https://nutritional-info-94609.web.app/)**
-
- Or
- 
- You'll need [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer to run locally
+You'll need [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer to run locally
  
  ```bash
 # Clone this repository
