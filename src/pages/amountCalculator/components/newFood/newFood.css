@@ -6,18 +6,14 @@
   flex-wrap: wrap;
 }
 
-.newFood h2 {
-  margin: 1.5rem;
-}
-
 .newFood section {
   margin: 0.5rem;
+  /* min-width: 290px; */
 }
 
 .newFood label {
   font-size: 1.25rem;
   margin: 1rem;
-  text-align: center;
 }
 
 .newFood input {
@@ -39,6 +35,7 @@
 
 #group {
   margin: 1rem;
+  margin-right: 0.5rem;
   padding: 0.8rem;
   border-radius: 1rem;
 }
@@ -51,4 +48,24 @@
 
 .newFood .navButton {
   align-self: stretch;
+}
+
+
+@media only screen and (max-width: 670px) {
+  .newFood section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+  }
+
+  #servingAmountGrams {
+    margin-left: 1.575rem;
+  }
+  
+  #caloricMeasurementKcal {
+    margin-left: 3.250rem;
+  }
+  
 }

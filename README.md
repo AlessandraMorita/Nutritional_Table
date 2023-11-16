@@ -1,7 +1,7 @@
 # Nutritional Information Project
 ### Introduction
 
-This is a React web application. This app was developed to help me replace foods in my diet. It suggests substitute foods and calculates the required amount of it.
+This is a React web application. This app was developed to help me replace foods in my diet. It lists substitute foods and calculates the required amount of it. You can also add a new food to the list. All you have to do is add the nutritional values of the new food. It's responsive, so I can use it on any device, whether on a cell phone or on a computer.
 
 Contents
 ========
@@ -56,4 +56,3 @@ $ npm start
 The project is still being developed. Next challenges:
 
 * Add more features
-* Make page amountCalculator responsive

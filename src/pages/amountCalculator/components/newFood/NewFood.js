@@ -50,9 +50,8 @@ function NewFood() {
 
   return (
     <form className="newFood" name="newFood" onSubmit={handleSubmit}>
-      <h2>What food do you want to register?</h2>
       <section>
-        <label htmlFor="newIngredient">What food?</label>
+        <label htmlFor="newIngredient">What food do you want to register?</label>
         <input
           id="newIngredient"
           type="text"

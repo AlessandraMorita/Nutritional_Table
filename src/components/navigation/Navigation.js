@@ -8,8 +8,7 @@ function Introduction() {
       <h1>Nutritional Information</h1>
       <p>Hello me!</p>
       <p>
-        This app was developed to help me replace foods in my diet. It suggests
-        substitute foods and calculates the required amount of it.
+        This app was developed to help me replace foods in my diet. It lists substitute foods and calculates the required amount of it. You can also add a new food to the list. All you have to do is add the nutritional values of the new food.
       </p>
       <p className="textRef">
         The data is based on my diet and data provided by my nutritionist.
