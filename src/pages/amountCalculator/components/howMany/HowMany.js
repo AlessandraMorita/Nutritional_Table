@@ -1,6 +1,6 @@
 import { useNavigate, useOutletContext } from "react-router-dom";
 import "./howMany.css";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 function HowMany() {
   const { replacedFood, replacedFoodAmount, newFood, updateStateInfo } =

@@ -1,6 +1,6 @@
 import { Link, useNavigate, useOutletContext } from "react-router-dom";
 import "./whichFood.css";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 function WhichFood() {
   const { dataBase, foodGroupList, replacedFood, updateStateInfo } =
